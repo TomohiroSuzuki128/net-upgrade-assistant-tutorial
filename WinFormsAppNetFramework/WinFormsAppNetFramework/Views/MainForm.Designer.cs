@@ -32,6 +32,7 @@
             this.labelZipCode = new System.Windows.Forms.Label();
             this.labelPrefecture = new System.Windows.Forms.Label();
             this.comboBoxPrefectures = new System.Windows.Forms.ComboBox();
+            this.buttonGetAddress = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBoxZipCode
@@ -74,11 +75,22 @@
             this.comboBoxPrefectures.Size = new System.Drawing.Size(225, 31);
             this.comboBoxPrefectures.TabIndex = 3;
             // 
+            // buttonGetAddress
+            // 
+            this.buttonGetAddress.Font = new System.Drawing.Font("ＭＳ ゴシック", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.buttonGetAddress.Location = new System.Drawing.Point(369, 36);
+            this.buttonGetAddress.Name = "buttonGetAddress";
+            this.buttonGetAddress.Size = new System.Drawing.Size(225, 30);
+            this.buttonGetAddress.TabIndex = 4;
+            this.buttonGetAddress.Text = "buttonGetAddress";
+            this.buttonGetAddress.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonGetAddress);
             this.Controls.Add(this.comboBoxPrefectures);
             this.Controls.Add(this.labelPrefecture);
             this.Controls.Add(this.labelZipCode);
@@ -96,6 +108,7 @@
         private System.Windows.Forms.Label labelZipCode;
         private System.Windows.Forms.Label labelPrefecture;
         private System.Windows.Forms.ComboBox comboBoxPrefectures;
+        private System.Windows.Forms.Button buttonGetAddress;
     }
 }
 

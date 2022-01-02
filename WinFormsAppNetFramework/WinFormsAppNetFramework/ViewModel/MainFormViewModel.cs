@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using WinFormsAppNetFramework.Models;
 using WinFormsAppNetFramework.Sevices;
 using WinFormsAppNetFramework.ExtensionMethods;
+using System.Windows.Input;
 
 namespace WinFormsAppNetFramework.ViewModel
 {
@@ -36,6 +37,9 @@ namespace WinFormsAppNetFramework.ViewModel
         public ObservableCollection<Prefecture> Prefectures { get; set; }
 
 
+        public ICommand GetAddressCommand { private set; get; }
+
+
         IncompatibleAPIs incompatibleAPIs = new IncompatibleAPIs();
 
         public MainFormViewModel()
@@ -54,6 +58,15 @@ namespace WinFormsAppNetFramework.ViewModel
             Prefectures.Add(Prefecture.Empty);
             Sevices.Prefectures.All().ForEach(x => Prefectures.Add(x));
             SelectedPrefecture = Prefecture.Empty;
+
+            GetAddressCommand = new Command(() => GetAddress("3460024"));
+        }
+
+        void GetAddress(string zipCode)
+        {
+            //StationItems.Clear();
+            //(await stationItemDataStore.GetItemsAsync(selectedLineItem.ID)).ForEach(x => StationItems.Add(x));
+            //SelectedStationItem = StationItem.Empty;
         }
 
         public void CreatePdbGenerator()

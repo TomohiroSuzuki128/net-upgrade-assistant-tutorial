@@ -29,6 +29,8 @@ namespace WinFormsAppNetFramework.Views
             labelZipCode.DataBindings.Add(new Binding("Text", viewModel, "LabelZipCode"));
             labelPrefecture.DataBindings.Add(new Binding("Text", viewModel, "LabelPrefecture"));
             comboBoxPrefectures.DataBindings.Add(new Binding("DataSource", viewModel, "Prefectures"));
+
+            buttonGetAddress.Click += (sender, args) => viewModel.GetAddressCommand.Execute("");
         }
     }
 }
