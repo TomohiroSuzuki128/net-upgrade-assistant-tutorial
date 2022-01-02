@@ -13,12 +13,22 @@ namespace WinFormsAppNetFramework.Views
 {
     public partial class MainForm : Form
     {
-        MainFormViewModel mainFormViewModel;
+        MainFormViewModel viewModel;
 
-        public MainForm(MainFormViewModel mainFormViewModel)
+        public MainForm(MainFormViewModel viewModel)
         {
-            InitializeComponent();
+            this.viewModel = viewModel;
 
+            InitializeComponent();
+            InitializeBinding();
+        }
+
+        void InitializeBinding()
+        {
+            DataBindings.Add(new Binding("Text", viewModel, "Title"));
+            labelZipCode.DataBindings.Add(new Binding("Text", viewModel, "LabelZipCode"));
+            labelPrefecture.DataBindings.Add(new Binding("Text", viewModel, "LabelPrefecture"));
+            comboBoxPrefectures.DataBindings.Add(new Binding("DataSource", viewModel, "Prefectures"));
         }
     }
 }
