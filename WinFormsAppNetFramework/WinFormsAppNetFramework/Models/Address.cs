@@ -13,6 +13,7 @@ namespace WinFormsAppNetFramework.Models
         public string City { get; }
         public string Machi { get; }
         public string Kana { get; }
+
         public Address(string[] values)
         {
             ZipCode = values?.FirstOrDefault();

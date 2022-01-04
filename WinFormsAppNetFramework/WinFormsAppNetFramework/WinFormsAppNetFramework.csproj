@@ -54,6 +54,7 @@
     <Compile Include="ViewModel\Command.cs" />
     <Compile Include="ViewModel\MainFormViewModel.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
+    <Compile Include="ViewModel\WeakEventManager.cs" />
     <Compile Include="Views\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>

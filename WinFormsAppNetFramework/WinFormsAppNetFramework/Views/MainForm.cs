@@ -26,11 +26,14 @@ namespace WinFormsAppNetFramework.Views
         void InitializeBinding()
         {
             DataBindings.Add(new Binding("Text", viewModel, "Title"));
-            labelZipCode.DataBindings.Add(new Binding("Text", viewModel, "LabelZipCode"));
-            labelPrefecture.DataBindings.Add(new Binding("Text", viewModel, "LabelPrefecture"));
+            labelZipCode.DataBindings.Add(new Binding("Text", viewModel, "LabelZipCodeText"));
+            labelPrefecture.DataBindings.Add(new Binding("Text", viewModel, "LabelPrefectureText"));
+            buttonGetAddress.DataBindings.Add(new Binding("Text", viewModel, "ButtonGetAddressText"));
             comboBoxPrefectures.DataBindings.Add(new Binding("DataSource", viewModel, "Prefectures"));
+            textBoxZipCode.DataBindings.Add(new Binding("Text", viewModel, "ZipCode"));
+            textBoxAddress.DataBindings.Add(new Binding("Text", viewModel, "Address"));
 
-            buttonGetAddress.Click += (sender, args) => viewModel.GetAddressCommand.Execute("");
+            buttonGetAddress.Click += (sender, args) => viewModel.GetAddressCommand.Execute(null);
         }
     }
 }
