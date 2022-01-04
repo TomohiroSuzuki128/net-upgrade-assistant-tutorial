@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Input;
+using WinFormsAppNetFramework.ExtensionMethods;
 using WinFormsAppNetFramework.Models;
 using WinFormsAppNetFramework.Sevices;
-using WinFormsAppNetFramework.ExtensionMethods;
-using System.Windows.Input;
 
 namespace WinFormsAppNetFramework.ViewModel
 {
@@ -40,7 +36,6 @@ namespace WinFormsAppNetFramework.ViewModel
             get { return zipCode; }
             set { SetProperty(ref zipCode, value); }
         }
-
 
         string address = string.Empty;
         public string Address
