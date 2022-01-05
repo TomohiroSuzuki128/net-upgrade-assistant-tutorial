@@ -23,6 +23,13 @@ namespace WinFormsAppNetFramework.ViewModel
             set { SetProperty(ref labelPrefectureText, value); }
         }
 
+        string labelAddressText = string.Empty;
+        public string LabelAddressText
+        {
+            get { return labelAddressText; }
+            set { SetProperty(ref labelAddressText, value); }
+        }
+
         string buttonGetAddressText = string.Empty;
         public string ButtonGetAddressText
         {
@@ -68,6 +75,7 @@ namespace WinFormsAppNetFramework.ViewModel
             Title = "Windows Form (.NET Framwrork アプリ)";
             LabelZipCodeText = "郵便番号";
             LabelPrefectureText = "都道府県";
+            LabelAddressText = "住所";
             ButtonGetAddressText = "住所検索";
 
             Prefectures = new ObservableCollection<Prefecture>();
@@ -83,7 +91,11 @@ namespace WinFormsAppNetFramework.ViewModel
             var addresses = await SearchAddressClient.ZipToAddress(ZipCode.Replace("-",""));
 
             if (addresses.Length > 0)
-                Address = $"{addresses.FirstOrDefault().City}{addresses.FirstOrDefault().Machi}";
+            {
+                var address = addresses.FirstOrDefault();
+                Address = $"{address.City}{address.Machi}";
+                SelectedPrefecture = Sevices.Prefectures.All().Where(x => x.Name == address.Prefecture).FirstOrDefault();
+            }
         }
 
         public void CreatePdbGenerator()

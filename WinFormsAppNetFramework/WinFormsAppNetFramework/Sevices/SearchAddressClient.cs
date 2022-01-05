@@ -71,7 +71,6 @@ namespace WinFormsAppNetFramework.Sevices
 
     internal static class AddressToZip
     {
-
         public static async Task<Address[]> Search(string pref, string address)
         {
             var parameters = new FormUrlEncodedContent(new Dictionary<string, string>

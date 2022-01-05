@@ -25,15 +25,17 @@ namespace WinFormsAppNetFramework.Views
 
         void InitializeBinding()
         {
-            DataBindings.Add(new Binding("Text", viewModel, "Title"));
-            labelZipCode.DataBindings.Add(new Binding("Text", viewModel, "LabelZipCodeText"));
-            labelPrefecture.DataBindings.Add(new Binding("Text", viewModel, "LabelPrefectureText"));
-            buttonGetAddress.DataBindings.Add(new Binding("Text", viewModel, "ButtonGetAddressText"));
-            comboBoxPrefectures.DataBindings.Add(new Binding("DataSource", viewModel, "Prefectures"));
-            textBoxZipCode.DataBindings.Add(new Binding("Text", viewModel, "ZipCode"));
-            textBoxAddress.DataBindings.Add(new Binding("Text", viewModel, "Address"));
+            DataBindings.Add(new Binding("Text", viewModel, nameof(viewModel.Title)));
+            labelZipCode.DataBindings.Add(new Binding("Text", viewModel, nameof(viewModel.LabelZipCodeText)));
+            labelPrefecture.DataBindings.Add(new Binding("Text", viewModel, nameof(viewModel.LabelPrefectureText)));
+            labelAddress.DataBindings.Add(new Binding("Text", viewModel, nameof(viewModel.LabelAddressText)));
+            buttonGetAddress.DataBindings.Add(new Binding("Text", viewModel, nameof(viewModel.ButtonGetAddressText)));
+            comboBoxPrefectures.DataBindings.Add(new Binding("DataSource", viewModel, nameof(viewModel.Prefectures)));
+            comboBoxPrefectures.DataBindings.Add(new Binding("SelectedItem", viewModel, nameof(viewModel.SelectedPrefecture)));
+            textBoxZipCode.DataBindings.Add(new Binding("Text", viewModel, nameof(viewModel.ZipCode)));
+            textBoxAddress.DataBindings.Add(new Binding("Text", viewModel, nameof(viewModel.Address)));
 
-            buttonGetAddress.Click += (sender, args) => viewModel.GetAddressCommand.Execute(null);
+            buttonGetAddress.Click += (_, __) => viewModel.GetAddressCommand.Execute(null);
         }
     }
 }
