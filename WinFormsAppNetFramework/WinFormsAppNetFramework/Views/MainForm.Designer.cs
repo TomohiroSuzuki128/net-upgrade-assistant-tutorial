@@ -35,6 +35,9 @@
             this.buttonGetAddress = new System.Windows.Forms.Button();
             this.labelAddress = new System.Windows.Forms.Label();
             this.textBoxAddress = new System.Windows.Forms.TextBox();
+            this.dataGridDammy = new System.Windows.Forms.DataGrid();
+            this.labelDataGrid = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridDammy)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxZipCode
@@ -107,11 +110,32 @@
             this.textBoxAddress.Size = new System.Drawing.Size(522, 30);
             this.textBoxAddress.TabIndex = 6;
             // 
+            // dataGridDammy
+            // 
+            this.dataGridDammy.DataMember = "";
+            this.dataGridDammy.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this.dataGridDammy.Location = new System.Drawing.Point(52, 254);
+            this.dataGridDammy.Name = "dataGridDammy";
+            this.dataGridDammy.Size = new System.Drawing.Size(698, 159);
+            this.dataGridDammy.TabIndex = 7;
+            // 
+            // labelDataGrid
+            // 
+            this.labelDataGrid.AutoSize = true;
+            this.labelDataGrid.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.labelDataGrid.Location = new System.Drawing.Point(57, 231);
+            this.labelDataGrid.Name = "labelDataGrid";
+            this.labelDataGrid.Size = new System.Drawing.Size(239, 20);
+            this.labelDataGrid.TabIndex = 8;
+            this.labelDataGrid.Text = ".NET 6 非対応の DatGrid";
+            this.labelDataGrid.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelDataGrid);
             this.Controls.Add(this.textBoxAddress);
             this.Controls.Add(this.labelAddress);
             this.Controls.Add(this.buttonGetAddress);
@@ -119,8 +143,10 @@
             this.Controls.Add(this.labelPrefecture);
             this.Controls.Add(this.labelZipCode);
             this.Controls.Add(this.textBoxZipCode);
+            this.Controls.Add(this.dataGridDammy);
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "MainForm";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridDammy)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,6 +161,8 @@
         private System.Windows.Forms.Button buttonGetAddress;
         private System.Windows.Forms.Label labelAddress;
         private System.Windows.Forms.TextBox textBoxAddress;
+        private System.Windows.Forms.DataGrid dataGridDammy;
+        private System.Windows.Forms.Label labelDataGrid;
     }
 }
 
