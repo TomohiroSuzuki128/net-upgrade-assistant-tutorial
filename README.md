@@ -37,5 +37,3 @@ net-upgrade-assistant-tutorial---+---01_NetFramework // 移行前の .NET Framew
 ・移行前に .NET Portability Analyzer で、移行後でサポートされていないコントロール API を確認する。 
 ・移行前と、移行後の csproj ファイルの記述の違いを確認する
 ・Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers による指摘事項を確認する
-
-
