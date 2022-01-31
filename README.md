@@ -1,6 +1,6 @@
 # net-upgrade-assistant-tutorial  
   
-2022/2/3 Microsoft Developer Day  
+[2022/2/3 Microsoft Developer Day](https://msevents.microsoft.com/event?id=1619975101)  
 16:45 – 17:25　ブレイクアウトセッション BS15  
 「.NET アップグレード アシスタントで簡単にできます！ .NET Framework アプリの .NET 6 へのマイグレーション」  
 で使用したサンプルコードです。  
