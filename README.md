@@ -16,6 +16,7 @@ https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnal
 [https://docs.microsoft.com/ja-jp/dotnet/core/porting/upgrade-assistant-overview](https://docs.microsoft.com/ja-jp/dotnet/core/porting/upgrade-assistant-overview?WT.mc_id=DT-MVP-5002467)  
   
 # フォルダ構成  
+```
 net-upgrade-assistant-tutorial---+---01_NetFramework // 移行前の .NET Framework アプリ  
                                  |   +---AspNetAppNetFramewor  
                                  |   +---WinFormsAppNetFramework  
@@ -23,6 +24,7 @@ net-upgrade-assistant-tutorial---+---01_NetFramework // 移行前の .NET Framew
                                  +---02_Net6Migrated // 移行後の .NET 6 アプリ  
                                      +---AspNetAppNet6  
                                      +---WinFormsAppNet6  
+```
   
 # .NET アップグレード アシスタントによるソースコード変換における留意点  
 ## ASP.NET MVC に関する留意点  
