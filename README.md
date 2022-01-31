@@ -1,12 +1,19 @@
 # net-upgrade-assistant-tutorial
 　
-2022/2/3 Microsoft Developer Day 
-16:45 – 17:25　ブレイクアウトセッション BS15
-「.NET アップグレード アシスタントで簡単にできます！ .NET Framework アプリの .NET 6 へのマイグレーション」
-で使用したサンプルコードです。
+2022/2/3 Microsoft Developer Day　
+16:45 – 17:25　ブレイクアウトセッション BS15　
+「.NET アップグレード アシスタントで簡単にできます！ .NET Framework アプリの .NET 6 へのマイグレーション」　
+で使用したサンプルコードです。　
 　
 # セッション資料・動画
-リンク準備中
+リンク準備中　
+　
+# 使用ツール　
+## .NET Portability Analyzer　
+https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer
+　
+## .NET アップグレード アシスタント　
+[https://docs.microsoft.com/ja-jp/dotnet/core/porting/upgrade-assistant-overview](https://docs.microsoft.com/ja-jp/dotnet/core/porting/upgrade-assistant-overview?WT.mc_id=DT-MVP-5002467)
 　
 # フォルダ構成
 net-upgrade-assistant-tutorial---+---01_NetFramework // 移行前の .NET Framework アプリ
