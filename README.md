@@ -44,16 +44,18 @@ net-upgrade-assistant-tutorial---+---01_NetFramework // 移行前の .NET Framew
 ```
   
 # .NET アップグレード アシスタントによるソースコード変換における留意点  
+移行前後のソースコードを見比べると参考になります。  
+  
 ## ASP.NET MVC に関する留意点  
   
 ・移行前に、.NET Portability Analyzer で、移行後でサポートされていないコントロール API を確認する。   
-・移行前と、移行後の csproj ファイルの記述の違いを確認する  
-・スタートプロセスの違い（Global.asax、App_Startフォルダ）を確認する。  
-・JS, css のレンダリング、静的リンクの違いを確認する  
+・移行前と、移行後の csproj ファイルの記述の違い（非SDKスタイル/SDKスタイル）を確認する  
+・スタートプロセスの違い（Global.asax、App_Startフォルダ / Program.cs, Startup.cs）を確認する。  
+・JS, css のレンダリング（.NET Framework）、静的リンク（.NET 6）の違いを確認する（Views/Shared/_Layout.chtml）  
 ・Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers による指摘事項を確認する  
   
 ## WinForms に関する留意点  
 ・移行前の .NET Framework の時点で View と バックエンドを Binding するなど分離する（自動テスト導入のため）  
 ・移行前に .NET Portability Analyzer で、移行後でサポートされていないコントロール API を確認する。  
-・移行前と、移行後の csproj ファイルの記述の違いを確認する  
+・移行前と、移行後の csproj ファイルの記述の違い（非SDKスタイル/SDKスタイル）を確認する  
 ・Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers による指摘事項を確認する  
