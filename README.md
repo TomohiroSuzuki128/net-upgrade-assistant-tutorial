@@ -17,6 +17,9 @@
 - ツールで移行しきれなかったコードはどの部分であり、それはどのように修正するのか  
   
 # セッション資料・動画  
+## 資料  
+https://www.slideshare.net/microsoftjp/bs15net-net-framework-net-6  
+## 動画  
 公式より公開されましたらリンクを追加します  
   
 # 使用ツール  
